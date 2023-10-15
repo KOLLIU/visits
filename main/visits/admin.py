@@ -25,7 +25,7 @@ class AdminSalePoint(admin.ModelAdmin):
 @admin.register(Visit)
 class AdminVisit(admin.ModelAdmin):
     list_display = ("sale_point", "datetime", "latitude", "longitude")
-    search_fields = ("sale_point", "workers__name")
+    search_fields = ("sale_point")
 
     def has_delete_permission(self, request, obj=None):
         return False
